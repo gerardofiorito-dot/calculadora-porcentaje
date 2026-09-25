@@ -4,679 +4,315 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Calculadora de Porcentaje Online | Gratis</title>
+    <title>Calculadoras Argentinas | Porcentaje e IVA</title>
 
-    <meta name="description" content="Calculadora de porcentajes online y gratis. Calculá porcentajes, aumentos, descuentos y qué porcentaje representa un número.">
+    <meta name="description" content="Calculadoras online y gratis para Argentina. Calculá porcentajes, aumentos, descuentos e IVA de forma rápida y sencilla.">
 
     <style>
-
         * {
             box-sizing: border-box;
         }
 
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Arial, sans-serif;
             background: #f4f6f8;
-            color: #202124;
+            color: #222;
         }
 
-        /* ENCABEZADO */
-
         header {
-            background: #111827;
+            background: #1f2937;
             color: white;
-            padding: 28px 20px;
             text-align: center;
+            padding: 30px 15px;
         }
 
         header h1 {
-            margin: 0 0 8px;
-            font-size: 30px;
+            margin: 0 0 10px;
+            font-size: 32px;
         }
 
         header p {
             margin: 0;
             color: #d1d5db;
-            font-size: 16px;
         }
 
-        /* CONTENEDOR */
-
-        .contenedor {
-            width: 92%;
-            max-width: 850px;
+        main {
+            max-width: 900px;
             margin: 30px auto;
+            padding: 0 15px;
         }
 
-        /* TARJETA */
-
-        .tarjeta {
+        .calculadora {
             background: white;
-            border-radius: 14px;
             padding: 25px;
-            margin-bottom: 22px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
         }
 
-        .tarjeta h2 {
+        .calculadora h2 {
             margin-top: 0;
-            font-size: 21px;
+            color: #111827;
         }
 
-        .descripcion {
-            color: #666;
-            line-height: 1.5;
+        .calculadora p {
+            color: #555;
         }
-
-        /* CAMPOS */
 
         label {
             display: block;
+            margin-top: 15px;
+            margin-bottom: 6px;
             font-weight: bold;
-            margin-top: 16px;
-            margin-bottom: 7px;
         }
 
-        input {
+        input,
+        select {
             width: 100%;
-            padding: 13px;
-            font-size: 17px;
-            border: 1px solid #cbd5e1;
+            padding: 12px;
+            border: 1px solid #ccc;
             border-radius: 8px;
-            outline: none;
-        }
-
-        input:focus {
-            border-color: #2563eb;
-        }
-
-        /* BOTONES */
-
-        .botones {
-            display: flex;
-            gap: 10px;
-            margin-top: 18px;
+            font-size: 16px;
         }
 
         button {
-            flex: 1;
-            padding: 13px;
+            width: 100%;
+            margin-top: 18px;
+            padding: 12px;
             border: none;
             border-radius: 8px;
+            background: #2563eb;
+            color: white;
             font-size: 16px;
             cursor: pointer;
         }
 
-        .calcular {
-            background: #2563eb;
-            color: white;
-        }
-
-        .calcular:hover {
+        button:hover {
             background: #1d4ed8;
         }
 
         .limpiar {
-            background: #e5e7eb;
-            color: #222;
+            background: #6b7280;
         }
 
         .limpiar:hover {
-            background: #d1d5db;
+            background: #4b5563;
         }
-
-        /* RESULTADO */
 
         .resultado {
-            display: none;
             margin-top: 18px;
             padding: 15px;
+            background: #f0fdf4;
             border-radius: 8px;
-            background: #eff6ff;
-            border: 1px solid #bfdbfe;
-            font-size: 19px;
             font-weight: bold;
-            text-align: center;
+            color: #166534;
         }
-
-        .copiar {
-            margin-top: 10px;
-            width: 100%;
-            background: #111827;
-            color: white;
-            font-size: 14px;
-        }
-
-        /* INFORMACIÓN */
-
-        .info {
-            line-height: 1.7;
-        }
-
-        .info h2 {
-            margin-top: 0;
-        }
-
-        .ejemplo {
-            background: #f8fafc;
-            padding: 15px;
-            border-left: 4px solid #2563eb;
-            margin: 15px 0;
-        }
-
-        /* FOOTER */
 
         footer {
             text-align: center;
-            padding: 30px 20px;
-            color: #6b7280;
-            font-size: 14px;
+            padding: 30px;
+            color: #777;
         }
-
-        /* CELULAR */
 
         @media (max-width: 600px) {
-
             header h1 {
-                font-size: 25px;
+                font-size: 26px;
             }
 
-            .contenedor {
-                width: 94%;
-                margin-top: 20px;
-            }
-
-            .tarjeta {
+            .calculadora {
                 padding: 20px;
             }
-
-            .botones {
-                flex-direction: column;
-            }
-
         }
-
     </style>
 </head>
 
-
 <body>
 
-
 <header>
-
-    <h1>Calculadora de Porcentaje</h1>
-
-    <p>
-        Calculá porcentajes, descuentos y aumentos gratis
-    </p>
-
+    <h1>Calculadoras Argentinas</h1>
+    <p>Calculadoras online gratuitas, rápidas y fáciles de usar.</p>
 </header>
 
+<main>
 
-<main class="contenedor">
+    <!-- CALCULADORA DE PORCENTAJE -->
 
+    <div class="calculadora">
 
-    <!-- INTRODUCCIÓN -->
+        <h2>Calculadora de Porcentaje</h2>
 
-    <section class="tarjeta">
+        <p>Calculá porcentajes, aumentos, descuentos y proporciones.</p>
 
-        <h2>Calculadora de porcentajes online</h2>
+        <label>¿Cuánto es X% de un número?</label>
 
-        <p class="descripcion">
+        <input type="number" id="numero1" placeholder="Ej: 50000">
 
-            Usá nuestras herramientas gratuitas para calcular
-            porcentajes de forma rápida y sencilla.
+        <input type="number" id="porcentaje1" placeholder="Ej: 21">
 
-            No necesitás registrarte ni descargar ningún programa.
+        <button onclick="calcularPorcentaje()">
+            Calcular
+        </button>
 
-        </p>
+        <button class="limpiar" onclick="limpiar('numero1','porcentaje1','resultado1')">
+            Limpiar
+        </button>
 
-    </section>
-
-
-
-    <!-- PORCENTAJE -->
-
-    <section class="tarjeta">
-
-        <h2>¿Cuánto es un porcentaje de un número?</h2>
-
-        <label for="porcentaje1">
-            Porcentaje
-        </label>
-
-        <input
-            type="number"
-            id="porcentaje1"
-            placeholder="Ejemplo: 20"
-        >
-
-        <label for="numero1">
-            Número
-        </label>
-
-        <input
-            type="number"
-            id="numero1"
-            placeholder="Ejemplo: 50000"
-        >
-
-        <div class="botones">
-
-            <button
-                class="calcular"
-                onclick="calcularPorcentaje()">
-                Calcular
-            </button>
-
-            <button
-                class="limpiar"
-                onclick="limpiar('porcentaje1','numero1','resultado1')">
-                Limpiar
-            </button>
-
+        <div class="resultado" id="resultado1">
+            Resultado:
         </div>
 
-        <div
-            class="resultado"
-            id="resultado1">
-        </div>
-
-    </section>
+    </div>
 
 
+    <!-- CALCULADORA DE IVA -->
 
-    <!-- AUMENTO -->
+    <div class="calculadora">
 
-    <section class="tarjeta">
-
-        <h2>Aumentar un precio</h2>
-
-        <p class="descripcion">
-            Calculá cuánto queda un precio después de aplicarle
-            un aumento porcentual.
-        </p>
-
-        <label>
-            Precio original
-        </label>
-
-        <input
-            type="number"
-            id="precioAumento"
-            placeholder="Ejemplo: 50000"
-        >
-
-        <label>
-            Porcentaje de aumento
-        </label>
-
-        <input
-            type="number"
-            id="porcentajeAumento"
-            placeholder="Ejemplo: 20"
-        >
-
-        <div class="botones">
-
-            <button
-                class="calcular"
-                onclick="calcularAumento()">
-                Calcular
-            </button>
-
-            <button
-                class="limpiar"
-                onclick="limpiar('precioAumento','porcentajeAumento','resultadoAumento')">
-                Limpiar
-            </button>
-
-        </div>
-
-        <div
-            class="resultado"
-            id="resultadoAumento">
-        </div>
-
-    </section>
-
-
-
-    <!-- DESCUENTO -->
-
-    <section class="tarjeta">
-
-        <h2>Calcular un descuento</h2>
-
-        <p class="descripcion">
-            Averiguá cuánto vas a pagar después de aplicar
-            un descuento porcentual.
-        </p>
-
-        <label>
-            Precio original
-        </label>
-
-        <input
-            type="number"
-            id="precioDescuento"
-            placeholder="Ejemplo: 50000"
-        >
-
-        <label>
-            Porcentaje de descuento
-        </label>
-
-        <input
-            type="number"
-            id="porcentajeDescuento"
-            placeholder="Ejemplo: 20"
-        >
-
-        <div class="botones">
-
-            <button
-                class="calcular"
-                onclick="calcularDescuento()">
-                Calcular
-            </button>
-
-            <button
-                class="limpiar"
-                onclick="limpiar('precioDescuento','porcentajeDescuento','resultadoDescuento')">
-                Limpiar
-            </button>
-
-        </div>
-
-        <div
-            class="resultado"
-            id="resultadoDescuento">
-        </div>
-
-    </section>
-
-
-
-    <!-- PORCENTAJE ENTRE DOS NUMEROS -->
-
-    <section class="tarjeta">
-
-        <h2>¿Qué porcentaje representa un número?</h2>
-
-        <p class="descripcion">
-            Descubrí qué porcentaje representa una cantidad
-            respecto de un total.
-        </p>
-
-        <label>
-            Parte
-        </label>
-
-        <input
-            type="number"
-            id="parte"
-            placeholder="Ejemplo: 20"
-        >
-
-        <label>
-            Total
-        </label>
-
-        <input
-            type="number"
-            id="total"
-            placeholder="Ejemplo: 100"
-        >
-
-        <div class="botones">
-
-            <button
-                class="calcular"
-                onclick="calcularQuePorcentaje()">
-                Calcular
-            </button>
-
-            <button
-                class="limpiar"
-                onclick="limpiar('parte','total','resultadoPorcentaje')">
-                Limpiar
-            </button>
-
-        </div>
-
-        <div
-            class="resultado"
-            id="resultadoPorcentaje">
-        </div>
-
-    </section>
-
-
-
-    <!-- INFORMACIÓN -->
-
-    <section class="tarjeta info">
-
-        <h2>¿Cómo se calcula un porcentaje?</h2>
+        <h2>Calculadora de IVA Argentina</h2>
 
         <p>
-            Para calcular un porcentaje de un número,
-            multiplicá el número por el porcentaje y dividilo por 100.
+            Calculá el IVA y obtené el precio final o el precio sin IVA.
         </p>
 
-        <div class="ejemplo">
+        <label>Precio</label>
 
-            <strong>Ejemplo:</strong>
+        <input
+            type="number"
+            id="precioIVA"
+            placeholder="Ej: 100000"
+        >
 
-            <br><br>
+        <label>Porcentaje de IVA</label>
 
-            20% de 50.000
+        <select id="tipoIVA">
+            <option value="21">21%</option>
+            <option value="10.5">10,5%</option>
+            <option value="27">27%</option>
+        </select>
 
-            <br>
+        <label>Operación</label>
 
-            50.000 × 20 ÷ 100 = 10.000
+        <select id="operacionIVA">
+            <option value="agregar">
+                Agregar IVA al precio
+            </option>
 
+            <option value="quitar">
+                Quitar IVA de un precio final
+            </option>
+        </select>
+
+        <button onclick="calcularIVA()">
+            Calcular IVA
+        </button>
+
+        <button class="limpiar" onclick="limpiarIVA()">
+            Limpiar
+        </button>
+
+        <div class="resultado" id="resultadoIVA">
+            Resultado:
         </div>
 
-        <p>
-            Por lo tanto, el 20% de 50.000 es
-            <strong>10.000</strong>.
-        </p>
-
-    </section>
-
+    </div>
 
 </main>
 
-
 <footer>
-
-    Calculadora de Porcentaje Online © 2026
-
+    © 2026 Calculadoras Argentinas
 </footer>
-
 
 
 <script>
 
-
-function mostrarResultado(id, texto) {
-
-    let elemento = document.getElementById(id);
-
-    elemento.innerText = texto;
-
-    elemento.style.display = "block";
-
-}
-
-
-
 function calcularPorcentaje() {
 
-    let porcentaje =
-        Number(document.getElementById("porcentaje1").value);
-
-    let numero =
-        Number(document.getElementById("numero1").value);
-
-
-    if (isNaN(porcentaje) || isNaN(numero)) {
-
-        mostrarResultado(
-            "resultado1",
-            "Completá los dos campos."
-        );
-
-        return;
-
-    }
-
-
-    let resultado =
-        numero * porcentaje / 100;
-
-
-    mostrarResultado(
-        "resultado1",
-        porcentaje + "% de " +
-        numero.toLocaleString("es-AR") +
-        " = " +
-        resultado.toLocaleString("es-AR")
+    let numero = parseFloat(
+        document.getElementById("numero1").value
     );
 
-}
-
-
-
-function calcularAumento() {
-
-    let precio =
-        Number(document.getElementById("precioAumento").value);
-
-    let porcentaje =
-        Number(document.getElementById("porcentajeAumento").value);
-
-
-    if (isNaN(precio) || isNaN(porcentaje)) {
-
-        mostrarResultado(
-            "resultadoAumento",
-            "Completá los dos campos."
-        );
-
-        return;
-
-    }
-
-
-    let aumento =
-        precio * porcentaje / 100;
-
-    let final =
-        precio + aumento;
-
-
-    mostrarResultado(
-        "resultadoAumento",
-        "Precio final: $" +
-        final.toLocaleString("es-AR")
+    let porcentaje = parseFloat(
+        document.getElementById("porcentaje1").value
     );
 
-}
+    if (isNaN(numero) || isNaN(porcentaje)) {
 
-
-
-function calcularDescuento() {
-
-    let precio =
-        Number(document.getElementById("precioDescuento").value);
-
-    let porcentaje =
-        Number(document.getElementById("porcentajeDescuento").value);
-
-
-    if (isNaN(precio) || isNaN(porcentaje)) {
-
-        mostrarResultado(
-            "resultadoDescuento",
-            "Completá los dos campos."
-        );
+        document.getElementById("resultado1").innerHTML =
+            "Ingresá ambos valores.";
 
         return;
-
     }
 
+    let resultado = numero * porcentaje / 100;
 
-    let descuento =
-        precio * porcentaje / 100;
-
-    let final =
-        precio - descuento;
-
-
-    mostrarResultado(
-        "resultadoDescuento",
-        "Precio final: $" +
-        final.toLocaleString("es-AR")
-    );
-
+    document.getElementById("resultado1").innerHTML =
+        "Resultado: " + resultado.toLocaleString("es-AR");
 }
 
 
+function calcularIVA() {
 
-function calcularQuePorcentaje() {
+    let precio = parseFloat(
+        document.getElementById("precioIVA").value
+    );
 
-    let parte =
-        Number(document.getElementById("parte").value);
+    let iva = parseFloat(
+        document.getElementById("tipoIVA").value
+    );
 
-    let total =
-        Number(document.getElementById("total").value);
+    let operacion = document.getElementById("operacionIVA").value;
 
+    if (isNaN(precio)) {
 
-    if (isNaN(parte) || isNaN(total) || total === 0) {
-
-        mostrarResultado(
-            "resultadoPorcentaje",
-            "Ingresá valores válidos."
-        );
+        document.getElementById("resultadoIVA").innerHTML =
+            "Ingresá un precio.";
 
         return;
-
     }
 
+    if (operacion === "agregar") {
 
-    let resultado =
-        (parte / total) * 100;
+        let montoIVA = precio * iva / 100;
+        let total = precio + montoIVA;
 
+        document.getElementById("resultadoIVA").innerHTML =
+            "Precio sin IVA: $" + precio.toLocaleString("es-AR") +
+            "<br>IVA (" + iva + "%): $" + montoIVA.toLocaleString("es-AR") +
+            "<br>Precio final: $" + total.toLocaleString("es-AR");
 
-    mostrarResultado(
-        "resultadoPorcentaje",
-        "Resultado: " +
-        resultado.toFixed(2) +
-        "%"
-    );
+    } else {
 
+        let precioSinIVA = precio / (1 + iva / 100);
+        let montoIVA = precio - precioSinIVA;
+
+        document.getElementById("resultadoIVA").innerHTML =
+            "Precio final: $" + precio.toLocaleString("es-AR") +
+            "<br>IVA (" + iva + "%): $" + montoIVA.toLocaleString("es-AR") +
+            "<br>Precio sin IVA: $" + precioSinIVA.toLocaleString("es-AR");
+    }
 }
 
 
+function limpiar(campo1, campo2, resultado) {
 
-function limpiar(input1, input2, resultado) {
+    document.getElementById(campo1).value = "";
+    document.getElementById(campo2).value = "";
 
-    document.getElementById(input1).value = "";
-
-    document.getElementById(input2).value = "";
-
-    document.getElementById(resultado).style.display = "none";
-
+    document.getElementById(resultado).innerHTML =
+        "Resultado:";
 }
 
+
+function limpiarIVA() {
+
+    document.getElementById("precioIVA").value = "";
+
+    document.getElementById("resultadoIVA").innerHTML =
+        "Resultado:";
+}
 
 </script>
-
 
 </body>
 </html>
