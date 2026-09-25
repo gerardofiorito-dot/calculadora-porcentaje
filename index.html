@@ -1,625 +1,1023 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Calculadoras Argentinas | Porcentaje, IVA, Descuentos y Aumentos</title>
+<title>Calculadoras Argentinas | Gratis Online</title>
 
-    <meta name="description" content="Calculadoras online gratis para Argentina. Calculá porcentajes, IVA, descuentos y aumentos de precios de forma rápida y sencilla.">
+<meta name="description" content="Calculadoras online gratis para Argentina: porcentaje, IVA, descuentos, aumentos, cuotas, combustible, inflación, ganancias y más.">
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<style>
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f6f8;
-            color: #222;
-        }
+* {
+    box-sizing: border-box;
+}
 
-        header {
-            background: #1f2937;
-            color: white;
-            text-align: center;
-            padding: 35px 15px;
-        }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
 
-        header h1 {
-            margin: 0 0 10px;
-            font-size: 32px;
-        }
+header {
+    background: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
 
-        header p {
-            margin: 0;
-            color: #d1d5db;
-            font-size: 17px;
-        }
+header h1 {
+    margin: 0 0 10px;
+    font-size: 34px;
+}
 
-        main {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 0 15px;
-        }
+header p {
+    margin: 0;
+    color: #d1d5db;
+    font-size: 17px;
+}
 
-        .calculadora {
-            background: white;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 12px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-        }
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
 
-        .calculadora h2 {
-            margin-top: 0;
-            color: #111827;
-        }
+.calculadora {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.08);
+}
 
-        .calculadora p {
-            color: #555;
-            line-height: 1.5;
-        }
+.calculadora h2 {
+    margin-top: 0;
+    color: #111827;
+}
 
-        label {
-            display: block;
-            margin-top: 15px;
-            margin-bottom: 6px;
-            font-weight: bold;
-        }
+.calculadora p {
+    color: #555;
+    line-height: 1.5;
+}
 
-        input,
-        select {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 16px;
-        }
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
 
-        button {
-            width: 100%;
-            margin-top: 18px;
-            padding: 12px;
-            border: none;
-            border-radius: 8px;
-            background: #2563eb;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
 
-        button:hover {
-            background: #1d4ed8;
-        }
+button {
+    width: 100%;
+    margin-top: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
 
-        .limpiar {
-            background: #6b7280;
-        }
+button:hover {
+    background: #1d4ed8;
+}
 
-        .limpiar:hover {
-            background: #4b5563;
-        }
+.limpiar {
+    background: #6b7280;
+}
 
-        .resultado {
-            margin-top: 18px;
-            padding: 15px;
-            background: #f0fdf4;
-            border-radius: 8px;
-            font-weight: bold;
-            color: #166534;
-            line-height: 1.8;
-        }
+.limpiar:hover {
+    background: #4b5563;
+}
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: #777;
-        }
+.resultado {
+    margin-top: 18px;
+    padding: 15px;
+    background: #f0fdf4;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #166534;
+    line-height: 1.8;
+}
 
-        @media (max-width: 600px) {
+.separador {
+    height: 5px;
+}
 
-            header h1 {
-                font-size: 26px;
-            }
+footer {
+    text-align: center;
+    padding: 35px;
+    color: #777;
+}
 
-            .calculadora {
-                padding: 20px;
-            }
-        }
-    </style>
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    .calculadora {
+        padding: 20px;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
 
-    <h1>Calculadoras Argentinas</h1>
+<h1>Calculadoras Argentinas</h1>
 
-    <p>
-        Calculadoras online gratuitas, rápidas y fáciles de usar.
-    </p>
+<p>
+Calculadoras online gratuitas, rápidas y fáciles de usar.
+</p>
 
 </header>
-
 
 <main>
 
 
-    <!-- ================================= -->
-    <!-- CALCULADORA DE PORCENTAJE -->
-    <!-- ================================= -->
+<!-- 1 PORCENTAJE -->
 
-    <div class="calculadora">
+<div class="calculadora">
 
-        <h2>Calculadora de Porcentaje</h2>
+<h2>1. Calculadora de Porcentaje</h2>
 
-        <p>
-            Calculá cuánto representa un porcentaje de un número.
-        </p>
+<p>Calculá cuánto representa un porcentaje de un número.</p>
 
-        <label>¿Cuánto es X% de un número?</label>
+<label>Número</label>
+<input type="number" id="numPorcentaje" placeholder="Ej: 50000">
 
-        <input
-            type="number"
-            id="numeroPorcentaje"
-            placeholder="Ej: 50000"
-        >
+<label>Porcentaje</label>
+<input type="number" id="pctPorcentaje" placeholder="Ej: 21">
 
-        <label>Porcentaje</label>
+<button onclick="porcentaje()">Calcular</button>
 
-        <input
-            type="number"
-            id="valorPorcentaje"
-            placeholder="Ej: 21"
-        >
+<button class="limpiar" onclick="limpiar('numPorcentaje','pctPorcentaje','resPorcentaje')">
+Limpiar
+</button>
 
-        <button onclick="calcularPorcentaje()">
-            Calcular porcentaje
-        </button>
+<div class="resultado" id="resPorcentaje">Resultado:</div>
 
-        <button
-            class="limpiar"
-            onclick="limpiarCampos(
-                'numeroPorcentaje',
-                'valorPorcentaje',
-                'resultadoPorcentaje'
-            )"
-        >
-            Limpiar
-        </button>
-
-        <div
-            class="resultado"
-            id="resultadoPorcentaje"
-        >
-            Resultado:
-        </div>
-
-    </div>
+</div>
 
 
-    <!-- ================================= -->
-    <!-- CALCULADORA DE IVA -->
-    <!-- ================================= -->
+<!-- 2 IVA -->
 
-    <div class="calculadora">
+<div class="calculadora">
 
-        <h2>Calculadora de IVA Argentina</h2>
+<h2>2. Calculadora de IVA Argentina</h2>
 
-        <p>
-            Calculá el IVA y obtené el precio final o el precio sin IVA.
-        </p>
+<p>Agregá o quitá IVA de un precio.</p>
 
-        <label>Precio</label>
+<label>Precio</label>
+<input type="number" id="precioIVA" placeholder="Ej: 100000">
 
-        <input
-            type="number"
-            id="precioIVA"
-            placeholder="Ej: 100000"
-        >
+<label>IVA</label>
 
-        <label>Porcentaje de IVA</label>
+<select id="iva">
+<option value="21">21%</option>
+<option value="10.5">10,5%</option>
+<option value="27">27%</option>
+</select>
 
-        <select id="tipoIVA">
+<label>Operación</label>
 
-            <option value="21">
-                21%
-            </option>
+<select id="operacionIVA">
 
-            <option value="10.5">
-                10,5%
-            </option>
+<option value="agregar">
+Agregar IVA
+</option>
 
-            <option value="27">
-                27%
-            </option>
+<option value="quitar">
+Quitar IVA
+</option>
 
-        </select>
+</select>
 
-        <label>Operación</label>
+<button onclick="calcularIVA()">Calcular IVA</button>
 
-        <select id="operacionIVA">
+<button class="limpiar" onclick="limpiarIVA()">Limpiar</button>
 
-            <option value="agregar">
-                Agregar IVA al precio
-            </option>
+<div class="resultado" id="resIVA">Resultado:</div>
 
-            <option value="quitar">
-                Quitar IVA de un precio final
-            </option>
-
-        </select>
-
-        <button onclick="calcularIVA()">
-            Calcular IVA
-        </button>
-
-        <button
-            class="limpiar"
-            onclick="limpiarIVA()"
-        >
-            Limpiar
-        </button>
-
-        <div
-            class="resultado"
-            id="resultadoIVA"
-        >
-            Resultado:
-        </div>
-
-    </div>
+</div>
 
 
-    <!-- ================================= -->
-    <!-- CALCULADORA DE DESCUENTO -->
-    <!-- ================================= -->
+<!-- 3 DESCUENTO -->
 
-    <div class="calculadora">
+<div class="calculadora">
 
-        <h2>Calculadora de Descuento</h2>
+<h2>3. Calculadora de Descuento</h2>
 
-        <p>
-            Calculá cuánto ahorrás y cuál es el precio final después
-            de aplicar un descuento.
-        </p>
+<p>Calculá cuánto ahorrás y el precio final.</p>
 
-        <label>Precio original</label>
+<label>Precio original</label>
+<input type="number" id="precioDesc" placeholder="Ej: 80000">
 
-        <input
-            type="number"
-            id="precioDescuento"
-            placeholder="Ej: 80000"
-        >
+<label>Descuento (%)</label>
+<input type="number" id="pctDesc" placeholder="Ej: 25">
 
-        <label>Descuento</label>
+<button onclick="descuento()">Calcular descuento</button>
 
-        <input
-            type="number"
-            id="porcentajeDescuento"
-            placeholder="Ej: 25"
-        >
+<button class="limpiar" onclick="limpiar('precioDesc','pctDesc','resDesc')">
+Limpiar
+</button>
 
-        <button onclick="calcularDescuento()">
-            Calcular descuento
-        </button>
+<div class="resultado" id="resDesc">Resultado:</div>
 
-        <button
-            class="limpiar"
-            onclick="limpiarCampos(
-                'precioDescuento',
-                'porcentajeDescuento',
-                'resultadoDescuento'
-            )"
-        >
-            Limpiar
-        </button>
-
-        <div
-            class="resultado"
-            id="resultadoDescuento"
-        >
-            Resultado:
-        </div>
-
-    </div>
+</div>
 
 
-    <!-- ================================= -->
-    <!-- CALCULADORA DE AUMENTO -->
-    <!-- ================================= -->
+<!-- 4 AUMENTO -->
 
-    <div class="calculadora">
+<div class="calculadora">
 
-        <h2>Calculadora de Aumento</h2>
+<h2>4. Calculadora de Aumento</h2>
 
-        <p>
-            Calculá cuánto aumenta un precio y cuál será su nuevo valor.
-        </p>
+<p>Calculá un aumento porcentual sobre un precio.</p>
 
-        <label>Precio original</label>
+<label>Precio original</label>
+<input type="number" id="precioAum" placeholder="Ej: 80000">
 
-        <input
-            type="number"
-            id="precioAumento"
-            placeholder="Ej: 80000"
-        >
+<label>Aumento (%)</label>
+<input type="number" id="pctAum" placeholder="Ej: 15">
 
-        <label>Porcentaje de aumento</label>
+<button onclick="aumento()">Calcular aumento</button>
 
-        <input
-            type="number"
-            id="porcentajeAumento"
-            placeholder="Ej: 15"
-        >
+<button class="limpiar" onclick="limpiar('precioAum','pctAum','resAum')">
+Limpiar
+</button>
 
-        <button onclick="calcularAumento()">
-            Calcular aumento
-        </button>
+<div class="resultado" id="resAum">Resultado:</div>
 
-        <button
-            class="limpiar"
-            onclick="limpiarCampos(
-                'precioAumento',
-                'porcentajeAumento',
-                'resultadoAumento'
-            )"
-        >
-            Limpiar
-        </button>
+</div>
 
-        <div
-            class="resultado"
-            id="resultadoAumento"
-        >
-            Resultado:
-        </div>
 
-    </div>
+<!-- 5 REGLA DE TRES -->
+
+<div class="calculadora">
+
+<h2>5. Calculadora de Regla de Tres</h2>
+
+<p>Resolvé una regla de tres simple.</p>
+
+<label>A</label>
+<input type="number" id="regA" placeholder="Ej: 3">
+
+<label>B</label>
+<input type="number" id="regB" placeholder="Ej: 15000">
+
+<label>C</label>
+<input type="number" id="regC" placeholder="Ej: 7">
+
+<button onclick="reglaTres()">Calcular</button>
+
+<button class="limpiar" onclick="limpiarTres()">
+Limpiar
+</button>
+
+<div class="resultado" id="resRegla">Resultado:</div>
+
+</div>
+
+
+<!-- 6 CUOTAS -->
+
+<div class="calculadora">
+
+<h2>6. Calculadora de Cuotas</h2>
+
+<p>Calculá el valor de una cuota con interés simple.</p>
+
+<label>Precio</label>
+<input type="number" id="precioCuota" placeholder="Ej: 300000">
+
+<label>Cantidad de cuotas</label>
+<input type="number" id="cantCuotas" placeholder="Ej: 6">
+
+<label>Interés total (%)</label>
+<input type="number" id="interesCuota" placeholder="Ej: 20">
+
+<button onclick="cuotas()">Calcular cuotas</button>
+
+<button class="limpiar" onclick="limpiarCuotas()">
+Limpiar
+</button>
+
+<div class="resultado" id="resCuotas">Resultado:</div>
+
+</div>
+
+
+<!-- 7 SUELDO -->
+
+<div class="calculadora">
+
+<h2>7. Calculadora de Sueldo Neto</h2>
+
+<p>Estimación simple a partir del sueldo bruto.</p>
+
+<label>Sueldo bruto</label>
+<input type="number" id="sueldoBruto" placeholder="Ej: 1000000">
+
+<label>Descuentos estimados (%)</label>
+<input type="number" id="descSueldo" value="17">
+
+<button onclick="sueldo()">Calcular sueldo neto</button>
+
+<button class="limpiar" onclick="limpiarSueldo()">
+Limpiar
+</button>
+
+<div class="resultado" id="resSueldo">Resultado:</div>
+
+</div>
+
+
+<!-- 8 COMBUSTIBLE -->
+
+<div class="calculadora">
+
+<h2>8. Calculadora de Combustible</h2>
+
+<p>Estimá cuánto combustible necesitás y cuánto vas a gastar.</p>
+
+<label>Distancia (km)</label>
+<input type="number" id="kmComb" placeholder="Ej: 300">
+
+<label>Consumo (litros cada 100 km)</label>
+<input type="number" id="consumoComb" placeholder="Ej: 10">
+
+<label>Precio por litro</label>
+<input type="number" id="precioComb" placeholder="Ej: 1500">
+
+<button onclick="combustible()">Calcular combustible</button>
+
+<button class="limpiar" onclick="limpiarComb()">
+Limpiar
+</button>
+
+<div class="resultado" id="resComb">Resultado:</div>
+
+</div>
+
+
+<!-- 9 EDAD -->
+
+<div class="calculadora">
+
+<h2>9. Calculadora de Edad</h2>
+
+<p>Calculá tu edad a partir de tu fecha de nacimiento.</p>
+
+<label>Fecha de nacimiento</label>
+
+<input type="date" id="fechaNacimiento">
+
+<button onclick="edad()">Calcular edad</button>
+
+<button class="limpiar" onclick="document.getElementById('fechaNacimiento').value=''; document.getElementById('resEdad').innerHTML='Resultado:'">
+Limpiar
+</button>
+
+<div class="resultado" id="resEdad">Resultado:</div>
+
+</div>
+
+
+<!-- 10 PORCENTAJE DE AUMENTO -->
+
+<div class="calculadora">
+
+<h2>10. Calculadora de Porcentaje de Aumento</h2>
+
+<p>Descubrí qué porcentaje aumentó un precio.</p>
+
+<label>Precio anterior</label>
+<input type="number" id="precioAnterior" placeholder="Ej: 50000">
+
+<label>Precio nuevo</label>
+<input type="number" id="precioNuevo" placeholder="Ej: 65000">
+
+<button onclick="porcentajeAumento()">Calcular aumento</button>
+
+<button class="limpiar" onclick="limpiarPA()">
+Limpiar
+</button>
+
+<div class="resultado" id="resPA">Resultado:</div>
+
+</div>
+
+
+<!-- 11 INTERES -->
+
+<div class="calculadora">
+
+<h2>11. Calculadora de Interés</h2>
+
+<p>Calculá interés simple sobre un capital.</p>
+
+<label>Capital</label>
+<input type="number" id="capitalInteres" placeholder="Ej: 100000">
+
+<label>Interés (%)</label>
+<input type="number" id="pctInteres" placeholder="Ej: 10">
+
+<label>Períodos</label>
+<input type="number" id="periodosInteres" placeholder="Ej: 3">
+
+<button onclick="interes()">Calcular interés</button>
+
+<button class="limpiar" onclick="limpiarInteres()">
+Limpiar
+</button>
+
+<div class="resultado" id="resInteres">Resultado:</div>
+
+</div>
+
+
+<!-- 12 INFLACION -->
+
+<div class="calculadora">
+
+<h2>12. Calculadora de Inflación</h2>
+
+<p>Calculá cuánto aumenta un precio aplicando una tasa acumulada.</p>
+
+<label>Precio inicial</label>
+<input type="number" id="precioInflacion" placeholder="Ej: 100000">
+
+<label>Inflación (%)</label>
+<input type="number" id="pctInflacion" placeholder="Ej: 20">
+
+<button onclick="inflacion()">Calcular</button>
+
+<button class="limpiar" onclick="limpiarInflacion()">
+Limpiar
+</button>
+
+<div class="resultado" id="resInflacion">Resultado:</div>
+
+</div>
+
+
+<!-- 13 PRECIO FINAL -->
+
+<div class="calculadora">
+
+<h2>13. Calculadora de Precio Final</h2>
+
+<p>Calculá el precio final aplicando descuento y luego IVA.</p>
+
+<label>Precio original</label>
+<input type="number" id="precioFinal" placeholder="Ej: 100000">
+
+<label>Descuento (%)</label>
+<input type="number" id="descFinal" placeholder="Ej: 10">
+
+<label>IVA (%)</label>
+<input type="number" id="ivaFinal" value="21">
+
+<button onclick="precioFinalCalc()">Calcular precio final</button>
+
+<button class="limpiar" onclick="limpiarFinal()">
+Limpiar
+</button>
+
+<div class="resultado" id="resFinal">Resultado:</div>
+
+</div>
+
+
+<!-- 14 GANANCIA -->
+
+<div class="calculadora">
+
+<h2>14. Calculadora de Ganancia y Margen</h2>
+
+<p>Calculá ganancia y margen sobre una venta.</p>
+
+<label>Costo</label>
+<input type="number" id="costoGanancia" placeholder="Ej: 50000">
+
+<label>Precio de venta</label>
+<input type="number" id="ventaGanancia" placeholder="Ej: 80000">
+
+<button onclick="ganancia()">Calcular ganancia</button>
+
+<button class="limpiar" onclick="limpiarGanancia()">
+Limpiar
+</button>
+
+<div class="resultado" id="resGanancia">Resultado:</div>
+
+</div>
+
+
+<!-- 15 PROPINA -->
+
+<div class="calculadora">
+
+<h2>15. Calculadora de Propina</h2>
+
+<p>Calculá propina y cuánto paga cada persona.</p>
+
+<label>Total de la cuenta</label>
+<input type="number" id="cuentaPropina" placeholder="Ej: 50000">
+
+<label>Propina (%)</label>
+<input type="number" id="pctPropina" placeholder="Ej: 10">
+
+<label>Cantidad de personas</label>
+<input type="number" id="personasPropina" placeholder="Ej: 4">
+
+<button onclick="propina()">Calcular propina</button>
+
+<button class="limpiar" onclick="limpiarPropina()">
+Limpiar
+</button>
+
+<div class="resultado" id="resPropina">Resultado:</div>
+
+</div>
 
 
 </main>
 
-
 <footer>
 
-    © 2026 Calculadoras Argentinas
+© 2026 Calculadoras Argentinas
 
 </footer>
 
 
 <script>
 
+/* 1 PORCENTAJE */
 
-/* ================================= */
-/* PORCENTAJE */
-/* ================================= */
+function porcentaje() {
 
-function calcularPorcentaje() {
+let n = parseFloat(document.getElementById("numPorcentaje").value);
+let p = parseFloat(document.getElementById("pctPorcentaje").value);
 
-    let numero = parseFloat(
-        document.getElementById("numeroPorcentaje").value
-    );
+if (isNaN(n) || isNaN(p)) {
+document.getElementById("resPorcentaje").innerHTML = "Ingresá ambos valores.";
+return;
+}
 
-    let porcentaje = parseFloat(
-        document.getElementById("valorPorcentaje").value
-    );
+let r = n * p / 100;
 
-    if (isNaN(numero) || isNaN(porcentaje)) {
+document.getElementById("resPorcentaje").innerHTML =
+"Resultado: $" + r.toLocaleString("es-AR");
 
-        document.getElementById(
-            "resultadoPorcentaje"
-        ).innerHTML =
-            "Ingresá ambos valores.";
-
-        return;
-    }
-
-    let resultado = numero * porcentaje / 100;
-
-    document.getElementById(
-        "resultadoPorcentaje"
-    ).innerHTML =
-
-        "Resultado: " +
-        resultado.toLocaleString("es-AR");
 }
 
 
-/* ================================= */
-/* IVA */
-/* ================================= */
+/* 2 IVA */
 
 function calcularIVA() {
 
-    let precio = parseFloat(
-        document.getElementById("precioIVA").value
-    );
+let precio = parseFloat(document.getElementById("precioIVA").value);
+let iva = parseFloat(document.getElementById("iva").value);
+let op = document.getElementById("operacionIVA").value;
 
-    let iva = parseFloat(
-        document.getElementById("tipoIVA").value
-    );
+if (isNaN(precio)) {
+document.getElementById("resIVA").innerHTML = "Ingresá un precio.";
+return;
+}
 
-    let operacion =
-        document.getElementById("operacionIVA").value;
+if (op === "agregar") {
 
-    if (isNaN(precio)) {
+let monto = precio * iva / 100;
+let total = precio + monto;
 
-        document.getElementById(
-            "resultadoIVA"
-        ).innerHTML =
-            "Ingresá un precio.";
+document.getElementById("resIVA").innerHTML =
+"Precio sin IVA: $" + precio.toLocaleString("es-AR") +
+"<br>IVA: $" + monto.toLocaleString("es-AR") +
+"<br>Precio final: $" + total.toLocaleString("es-AR");
 
-        return;
-    }
+} else {
 
+let sinIVA = precio / (1 + iva / 100);
+let monto = precio - sinIVA;
 
-    if (operacion === "agregar") {
+document.getElementById("resIVA").innerHTML =
+"Precio final: $" + precio.toLocaleString("es-AR") +
+"<br>IVA: $" + monto.toLocaleString("es-AR") +
+"<br>Precio sin IVA: $" + sinIVA.toLocaleString("es-AR");
 
-        let montoIVA =
-            precio * iva / 100;
-
-        let total =
-            precio + montoIVA;
-
-        document.getElementById(
-            "resultadoIVA"
-        ).innerHTML =
-
-            "Precio sin IVA: $" +
-            precio.toLocaleString("es-AR") +
-
-            "<br>IVA (" +
-            iva +
-            "%): $" +
-            montoIVA.toLocaleString("es-AR") +
-
-            "<br>Precio final: $" +
-            total.toLocaleString("es-AR");
-
-    }
-
-
-    else {
-
-        let precioSinIVA =
-            precio / (1 + iva / 100);
-
-        let montoIVA =
-            precio - precioSinIVA;
-
-        document.getElementById(
-            "resultadoIVA"
-        ).innerHTML =
-
-            "Precio final: $" +
-            precio.toLocaleString("es-AR") +
-
-            "<br>IVA (" +
-            iva +
-            "%): $" +
-            montoIVA.toLocaleString("es-AR") +
-
-            "<br>Precio sin IVA: $" +
-            precioSinIVA.toLocaleString("es-AR");
-    }
+}
 
 }
 
 
-/* ================================= */
-/* DESCUENTO */
-/* ================================= */
+/* 3 DESCUENTO */
 
-function calcularDescuento() {
+function descuento() {
 
-    let precio = parseFloat(
-        document.getElementById("precioDescuento").value
-    );
+let precio = parseFloat(document.getElementById("precioDesc").value);
+let pct = parseFloat(document.getElementById("pctDesc").value);
 
-    let descuento = parseFloat(
-        document.getElementById("porcentajeDescuento").value
-    );
+if (isNaN(precio) || isNaN(pct)) {
+document.getElementById("resDesc").innerHTML = "Ingresá ambos valores.";
+return;
+}
 
-    if (isNaN(precio) || isNaN(descuento)) {
+let ahorro = precio * pct / 100;
+let final = precio - ahorro;
 
-        document.getElementById(
-            "resultadoDescuento"
-        ).innerHTML =
-            "Ingresá el precio y el descuento.";
+document.getElementById("resDesc").innerHTML =
+"Ahorro: $" + ahorro.toLocaleString("es-AR") +
+"<br>Precio final: $" + final.toLocaleString("es-AR");
 
-        return;
-    }
-
-    let ahorro =
-        precio * descuento / 100;
-
-    let precioFinal =
-        precio - ahorro;
-
-    document.getElementById(
-        "resultadoDescuento"
-    ).innerHTML =
-
-        "Descuento: $" +
-        ahorro.toLocaleString("es-AR") +
-
-        "<br>Precio final: $" +
-        precioFinal.toLocaleString("es-AR");
 }
 
 
-/* ================================= */
-/* AUMENTO */
-/* ================================= */
+/* 4 AUMENTO */
 
-function calcularAumento() {
+function aumento() {
 
-    let precio = parseFloat(
-        document.getElementById("precioAumento").value
-    );
+let precio = parseFloat(document.getElementById("precioAum").value);
+let pct = parseFloat(document.getElementById("pctAum").value);
 
-    let aumento = parseFloat(
-        document.getElementById("porcentajeAumento").value
-    );
+if (isNaN(precio) || isNaN(pct)) {
+document.getElementById("resAum").innerHTML = "Ingresá ambos valores.";
+return;
+}
 
-    if (isNaN(precio) || isNaN(aumento)) {
+let monto = precio * pct / 100;
+let final = precio + monto;
 
-        document.getElementById(
-            "resultadoAumento"
-        ).innerHTML =
-            "Ingresá el precio y el porcentaje.";
+document.getElementById("resAum").innerHTML =
+"Aumento: $" + monto.toLocaleString("es-AR") +
+"<br>Precio final: $" + final.toLocaleString("es-AR");
 
-        return;
-    }
-
-    let montoAumento =
-        precio * aumento / 100;
-
-    let precioFinal =
-        precio + montoAumento;
-
-    document.getElementById(
-        "resultadoAumento"
-    ).innerHTML =
-
-        "Aumento: $" +
-        montoAumento.toLocaleString("es-AR") +
-
-        "<br>Precio final: $" +
-        precioFinal.toLocaleString("es-AR");
 }
 
 
-/* ================================= */
+/* 5 REGLA DE TRES */
+
+function reglaTres() {
+
+let a = parseFloat(document.getElementById("regA").value);
+let b = parseFloat(document.getElementById("regB").value);
+let c = parseFloat(document.getElementById("regC").value);
+
+if (isNaN(a) || isNaN(b) || isNaN(c) || a === 0) {
+document.getElementById("resRegla").innerHTML = "Ingresá valores válidos.";
+return;
+}
+
+let resultado = b * c / a;
+
+document.getElementById("resRegla").innerHTML =
+"Resultado: " + resultado.toLocaleString("es-AR");
+
+}
+
+
+/* 6 CUOTAS */
+
+function cuotas() {
+
+let precio = parseFloat(document.getElementById("precioCuota").value);
+let cantidad = parseFloat(document.getElementById("cantCuotas").value);
+let interes = parseFloat(document.getElementById("interesCuota").value);
+
+if (isNaN(precio) || isNaN(cantidad) || isNaN(interes) || cantidad <= 0) {
+document.getElementById("resCuotas").innerHTML = "Ingresá valores válidos.";
+return;
+}
+
+let montoInteres = precio * interes / 100;
+let total = precio + montoInteres;
+let cuota = total / cantidad;
+
+document.getElementById("resCuotas").innerHTML =
+"Interés: $" + montoInteres.toLocaleString("es-AR") +
+"<br>Total: $" + total.toLocaleString("es-AR") +
+"<br>Cuota: $" + cuota.toLocaleString("es-AR");
+
+}
+
+
+/* 7 SUELDO */
+
+function sueldo() {
+
+let bruto = parseFloat(document.getElementById("sueldoBruto").value);
+let descuento = parseFloat(document.getElementById("descSueldo").value);
+
+if (isNaN(bruto) || isNaN(descuento)) {
+document.getElementById("resSueldo").innerHTML = "Ingresá los valores.";
+return;
+}
+
+let descuentos = bruto * descuento / 100;
+let neto = bruto - descuentos;
+
+document.getElementById("resSueldo").innerHTML =
+"Sueldo bruto: $" + bruto.toLocaleString("es-AR") +
+"<br>Descuentos estimados: $" + descuentos.toLocaleString("es-AR") +
+"<br>Sueldo neto estimado: $" + neto.toLocaleString("es-AR");
+
+}
+
+
+/* 8 COMBUSTIBLE */
+
+function combustible() {
+
+let km = parseFloat(document.getElementById("kmComb").value);
+let consumo = parseFloat(document.getElementById("consumoComb").value);
+let precio = parseFloat(document.getElementById("precioComb").value);
+
+if (isNaN(km) || isNaN(consumo) || isNaN(precio)) {
+document.getElementById("resComb").innerHTML = "Ingresá todos los valores.";
+return;
+}
+
+let litros = km * consumo / 100;
+let costo = litros * precio;
+
+document.getElementById("resComb").innerHTML =
+"Combustible necesario: " + litros.toFixed(2) + " litros" +
+"<br>Costo estimado: $" + costo.toLocaleString("es-AR");
+
+}
+
+
+/* 9 EDAD */
+
+function edad() {
+
+let fecha = document.getElementById("fechaNacimiento").value;
+
+if (!fecha) {
+document.getElementById("resEdad").innerHTML = "Ingresá tu fecha de nacimiento.";
+return;
+}
+
+let nacimiento = new Date(fecha + "T00:00:00");
+let hoy = new Date();
+
+let años = hoy.getFullYear() - nacimiento.getFullYear();
+
+let cumple =
+new Date(
+hoy.getFullYear(),
+nacimiento.getMonth(),
+nacimiento.getDate()
+);
+
+if (hoy < cumple) {
+años--;
+}
+
+document.getElementById("resEdad").innerHTML =
+"Edad: " + años + " años";
+
+}
+
+
+/* 10 PORCENTAJE DE AUMENTO */
+
+function porcentajeAumento() {
+
+let anterior = parseFloat(document.getElementById("precioAnterior").value);
+let nuevo = parseFloat(document.getElementById("precioNuevo").value);
+
+if (isNaN(anterior) || isNaN(nuevo) || anterior === 0) {
+document.getElementById("resPA").innerHTML = "Ingresá valores válidos.";
+return;
+}
+
+let pct = ((nuevo - anterior) / anterior) * 100;
+
+document.getElementById("resPA").innerHTML =
+"Variación: " + pct.toFixed(2) + "%";
+
+}
+
+
+/* 11 INTERES */
+
+function interes() {
+
+let capital = parseFloat(document.getElementById("capitalInteres").value);
+let pct = parseFloat(document.getElementById("pctInteres").value);
+let periodos = parseFloat(document.getElementById("periodosInteres").value);
+
+if (isNaN(capital) || isNaN(pct) || isNaN(periodos)) {
+document.getElementById("resInteres").innerHTML = "Ingresá todos los valores.";
+return;
+}
+
+let interesTotal = capital * pct / 100 * periodos;
+let total = capital + interesTotal;
+
+document.getElementById("resInteres").innerHTML =
+"Interés: $" + interesTotal.toLocaleString("es-AR") +
+"<br>Total: $" + total.toLocaleString("es-AR");
+
+}
+
+
+/* 12 INFLACION */
+
+function inflacion() {
+
+let precio = parseFloat(document.getElementById("precioInflacion").value);
+let pct = parseFloat(document.getElementById("pctInflacion").value);
+
+if (isNaN(precio) || isNaN(pct)) {
+document.getElementById("resInflacion").innerHTML = "Ingresá ambos valores.";
+return;
+}
+
+let aumento = precio * pct / 100;
+let final = precio + aumento;
+
+document.getElementById("resInflacion").innerHTML =
+"Aumento: $" + aumento.toLocaleString("es-AR") +
+"<br>Precio actualizado: $" + final.toLocaleString("es-AR");
+
+}
+
+
+/* 13 PRECIO FINAL */
+
+function precioFinalCalc() {
+
+let precio = parseFloat(document.getElementById("precioFinal").value);
+let descuento = parseFloat(document.getElementById("descFinal").value);
+let iva = parseFloat(document.getElementById("ivaFinal").value);
+
+if (isNaN(precio) || isNaN(descuento) || isNaN(iva)) {
+document.getElementById("resFinal").innerHTML = "Ingresá todos los valores.";
+return;
+}
+
+let precioDescuento = precio - precio * descuento / 100;
+let montoIVA = precioDescuento * iva / 100;
+let total = precioDescuento + montoIVA;
+
+document.getElementById("resFinal").innerHTML =
+"Después del descuento: $" + precioDescuento.toLocaleString("es-AR") +
+"<br>IVA: $" + montoIVA.toLocaleString("es-AR") +
+"<br>Precio final: $" + total.toLocaleString("es-AR");
+
+}
+
+
+/* 14 GANANCIA */
+
+function ganancia() {
+
+let costo = parseFloat(document.getElementById("costoGanancia").value);
+let venta = parseFloat(document.getElementById("ventaGanancia").value);
+
+if (isNaN(costo) || isNaN(venta)) {
+document.getElementById("resGanancia").innerHTML = "Ingresá ambos valores.";
+return;
+}
+
+let ganancia = venta - costo;
+let margen = venta === 0 ? 0 : ganancia / venta * 100;
+let rentabilidad = costo === 0 ? 0 : ganancia / costo * 100;
+
+document.getElementById("resGanancia").innerHTML =
+"Ganancia: $" + ganancia.toLocaleString("es-AR") +
+"<br>Margen sobre venta: " + margen.toFixed(2) + "%" +
+"<br>Rentabilidad sobre costo: " + rentabilidad.toFixed(2) + "%";
+
+}
+
+
+/* 15 PROPINA */
+
+function propina() {
+
+let cuenta = parseFloat(document.getElementById("cuentaPropina").value);
+let pct = parseFloat(document.getElementById("pctPropina").value);
+let personas = parseFloat(document.getElementById("personasPropina").value);
+
+if (isNaN(cuenta) || isNaN(pct) || isNaN(personas) || personas <= 0) {
+document.getElementById("resPropina").innerHTML = "Ingresá valores válidos.";
+return;
+}
+
+let montoPropina = cuenta * pct / 100;
+let total = cuenta + montoPropina;
+let porPersona = total / personas;
+
+document.getElementById("resPropina").innerHTML =
+"Propina: $" + montoPropina.toLocaleString("es-AR") +
+"<br>Total: $" + total.toLocaleString("es-AR") +
+"<br>Por persona: $" + porPersona.toLocaleString("es-AR");
+
+}
+
+
 /* LIMPIAR */
-/* ================================= */
 
-function limpiarCampos(
-    campo1,
-    campo2,
-    resultado
-) {
+function limpiar(a,b,c) {
 
-    document.getElementById(campo1).value = "";
+document.getElementById(a).value = "";
+document.getElementById(b).value = "";
+document.getElementById(c).innerHTML = "Resultado:";
 
-    document.getElementById(campo2).value = "";
-
-    document.getElementById(resultado).innerHTML =
-        "Resultado:";
 }
-
 
 function limpiarIVA() {
-
-    document.getElementById("precioIVA").value = "";
-
-    document.getElementById("resultadoIVA").innerHTML =
-        "Resultado:";
+document.getElementById("precioIVA").value = "";
+document.getElementById("resIVA").innerHTML = "Resultado:";
 }
 
+function limpiarTres() {
+document.getElementById("regA").value = "";
+document.getElementById("regB").value = "";
+document.getElementById("regC").value = "";
+document.getElementById("resRegla").innerHTML = "Resultado:";
+}
+
+function limpiarCuotas() {
+document.getElementById("precioCuota").value = "";
+document.getElementById("cantCuotas").value = "";
+document.getElementById("interesCuota").value = "";
+document.getElementById("resCuotas").innerHTML = "Resultado:";
+}
+
+function limpiarSueldo() {
+document.getElementById("sueldoBruto").value = "";
+document.getElementById("descSueldo").value = "17";
+document.getElementById("resSueldo").innerHTML = "Resultado:";
+}
+
+function limpiarComb() {
+document.getElementById("kmComb").value = "";
+document.getElementById("consumoComb").value = "";
+document.getElementById("precioComb").value = "";
+document.getElementById("resComb").innerHTML = "Resultado:";
+}
+
+function limpiarPA() {
+document.getElementById("precioAnterior").value = "";
+document.getElementById("precioNuevo").value = "";
+document.getElementById("resPA").innerHTML = "Resultado:";
+}
+
+function limpiarInteres() {
+document.getElementById("capitalInteres").value = "";
+document.getElementById("pctInteres").value = "";
+document.getElementById("periodosInteres").value = "";
+document.getElementById("resInteres").innerHTML = "Resultado:";
+}
+
+function limpiarInflacion() {
+document.getElementById("precioInflacion").value = "";
+document.getElementById("pctInflacion").value = "";
+document.getElementById("resInflacion").innerHTML = "Resultado:";
+}
+
+function limpiarFinal() {
+document.getElementById("precioFinal").value = "";
+document.getElementById("descFinal").value = "";
+document.getElementById("ivaFinal").value = "21";
+document.getElementById("resFinal").innerHTML = "Resultado:";
+}
+
+function limpiarGanancia() {
+document.getElementById("costoGanancia").value = "";
+document.getElementById("ventaGanancia").value = "";
+document.getElementById("resGanancia").innerHTML = "Resultado:";
+}
+
+function limpiarPropina() {
+document.getElementById("cuentaPropina").value = "";
+document.getElementById("pctPropina").value = "";
+document.getElementById("personasPropina").value = "";
+document.getElementById("resPropina").innerHTML = "Resultado:";
+}
 
 </script>
 
