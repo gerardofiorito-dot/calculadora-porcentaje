@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculadora de Porcentaje Online | Gratis</title>
+
+    <meta name="description" content="Calculadora de porcentajes online y gratis. Calculá porcentajes, aumentos, descuentos y qué porcentaje representa un número.">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f6f8;
+            color: #202124;
+        }
+
+        /* ENCABEZADO */
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 28px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0 0 8px;
+            font-size: 30px;
+        }
+
+        header p {
+            margin: 0;
+            color: #d1d5db;
+            font-size: 16px;
+        }
+
+        /* CONTENEDOR */
+
+        .contenedor {
+            width: 92%;
+            max-width: 850px;
+            margin: 30px auto;
+        }
+
+        /* TARJETA */
+
+        .tarjeta {
+            background: white;
+            border-radius: 14px;
+            padding: 25px;
+            margin-bottom: 22px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+
+        .tarjeta h2 {
+            margin-top: 0;
+            font-size: 21px;
+        }
+
+        .descripcion {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* CAMPOS */
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 16px;
+            margin-bottom: 7px;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            font-size: 17px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #2563eb;
+        }
+
+        /* BOTONES */
+
+        .botones {
+            display: flex;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        button {
+            flex: 1;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .calcular {
+            background: #2563eb;
+            color: white;
+        }
+
+        .calcular:hover {
+            background: #1d4ed8;
+        }
+
+        .limpiar {
+            background: #e5e7eb;
+            color: #222;
+        }
+
+        .limpiar:hover {
+            background: #d1d5db;
+        }
+
+        /* RESULTADO */
+
+        .resultado {
+            display: none;
+            margin-top: 18px;
+            padding: 15px;
+            border-radius: 8px;
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            font-size: 19px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .copiar {
+            margin-top: 10px;
+            width: 100%;
+            background: #111827;
+            color: white;
+            font-size: 14px;
+        }
+
+        /* INFORMACIÓN */
+
+        .info {
+            line-height: 1.7;
+        }
+
+        .info h2 {
+            margin-top: 0;
+        }
+
+        .ejemplo {
+            background: #f8fafc;
+            padding: 15px;
+            border-left: 4px solid #2563eb;
+            margin: 15px 0;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        /* CELULAR */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 25px;
+            }
+
+            .contenedor {
+                width: 94%;
+                margin-top: 20px;
+            }
+
+            .tarjeta {
+                padding: 20px;
+            }
+
+            .botones {
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>Calculadora de Porcentaje</h1>
+
+    <p>
+        Calculá porcentajes, descuentos y aumentos gratis
+    </p>
+
+</header>
+
+
+<main class="contenedor">
+
+
+    <!-- INTRODUCCIÓN -->
+
+    <section class="tarjeta">
+
+        <h2>Calculadora de porcentajes online</h2>
+
+        <p class="descripcion">
+
+            Usá nuestras herramientas gratuitas para calcular
+            porcentajes de forma rápida y sencilla.
+
+            No necesitás registrarte ni descargar ningún programa.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- PORCENTAJE -->
+
+    <section class="tarjeta">
+
+        <h2>¿Cuánto es un porcentaje de un número?</h2>
+
+        <label for="porcentaje1">
+            Porcentaje
+        </label>
+
+        <input
+            type="number"
+            id="porcentaje1"
+            placeholder="Ejemplo: 20"
+        >
+
+        <label for="numero1">
+            Número
+        </label>
+
+        <input
+            type="number"
+            id="numero1"
+            placeholder="Ejemplo: 50000"
+        >
+
+        <div class="botones">
+
+            <button
+                class="calcular"
+                onclick="calcularPorcentaje()">
+                Calcular
+            </button>
+
+            <button
+                class="limpiar"
+                onclick="limpiar('porcentaje1','numero1','resultado1')">
+                Limpiar
+            </button>
+
+        </div>
+
+        <div
+            class="resultado"
+            id="resultado1">
+        </div>
+
+    </section>
+
+
+
+    <!-- AUMENTO -->
+
+    <section class="tarjeta">
+
+        <h2>Aumentar un precio</h2>
+
+        <p class="descripcion">
+            Calculá cuánto queda un precio después de aplicarle
+            un aumento porcentual.
+        </p>
+
+        <label>
+            Precio original
+        </label>
+
+        <input
+            type="number"
+            id="precioAumento"
+            placeholder="Ejemplo: 50000"
+        >
+
+        <label>
+            Porcentaje de aumento
+        </label>
+
+        <input
+            type="number"
+            id="porcentajeAumento"
+            placeholder="Ejemplo: 20"
+        >
+
+        <div class="botones">
+
+            <button
+                class="calcular"
+                onclick="calcularAumento()">
+                Calcular
+            </button>
+
+            <button
+                class="limpiar"
+                onclick="limpiar('precioAumento','porcentajeAumento','resultadoAumento')">
+                Limpiar
+            </button>
+
+        </div>
+
+        <div
+            class="resultado"
+            id="resultadoAumento">
+        </div>
+
+    </section>
+
+
+
+    <!-- DESCUENTO -->
+
+    <section class="tarjeta">
+
+        <h2>Calcular un descuento</h2>
+
+        <p class="descripcion">
+            Averiguá cuánto vas a pagar después de aplicar
+            un descuento porcentual.
+        </p>
+
+        <label>
+            Precio original
+        </label>
+
+        <input
+            type="number"
+            id="precioDescuento"
+            placeholder="Ejemplo: 50000"
+        >
+
+        <label>
+            Porcentaje de descuento
+        </label>
+
+        <input
+            type="number"
+            id="porcentajeDescuento"
+            placeholder="Ejemplo: 20"
+        >
+
+        <div class="botones">
+
+            <button
+                class="calcular"
+                onclick="calcularDescuento()">
+                Calcular
+            </button>
+
+            <button
+                class="limpiar"
+                onclick="limpiar('precioDescuento','porcentajeDescuento','resultadoDescuento')">
+                Limpiar
+            </button>
+
+        </div>
+
+        <div
+            class="resultado"
+            id="resultadoDescuento">
+        </div>
+
+    </section>
+
+
+
+    <!-- PORCENTAJE ENTRE DOS NUMEROS -->
+
+    <section class="tarjeta">
+
+        <h2>¿Qué porcentaje representa un número?</h2>
+
+        <p class="descripcion">
+            Descubrí qué porcentaje representa una cantidad
+            respecto de un total.
+        </p>
+
+        <label>
+            Parte
+        </label>
+
+        <input
+            type="number"
+            id="parte"
+            placeholder="Ejemplo: 20"
+        >
+
+        <label>
+            Total
+        </label>
+
+        <input
+            type="number"
+            id="total"
+            placeholder="Ejemplo: 100"
+        >
+
+        <div class="botones">
+
+            <button
+                class="calcular"
+                onclick="calcularQuePorcentaje()">
+                Calcular
+            </button>
+
+            <button
+                class="limpiar"
+                onclick="limpiar('parte','total','resultadoPorcentaje')">
+                Limpiar
+            </button>
+
+        </div>
+
+        <div
+            class="resultado"
+            id="resultadoPorcentaje">
+        </div>
+
+    </section>
+
+
+
+    <!-- INFORMACIÓN -->
+
+    <section class="tarjeta info">
+
+        <h2>¿Cómo se calcula un porcentaje?</h2>
+
+        <p>
+            Para calcular un porcentaje de un número,
+            multiplicá el número por el porcentaje y dividilo por 100.
+        </p>
+
+        <div class="ejemplo">
+
+            <strong>Ejemplo:</strong>
+
+            <br><br>
+
+            20% de 50.000
+
+            <br>
+
+            50.000 × 20 ÷ 100 = 10.000
+
+        </div>
+
+        <p>
+            Por lo tanto, el 20% de 50.000 es
+            <strong>10.000</strong>.
+        </p>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    Calculadora de Porcentaje Online © 2026
+
+</footer>
+
+
+
+<script>
+
+
+function mostrarResultado(id, texto) {
+
+    let elemento = document.getElementById(id);
+
+    elemento.innerText = texto;
+
+    elemento.style.display = "block";
+
+}
+
+
+
+function calcularPorcentaje() {
+
+    let porcentaje =
+        Number(document.getElementById("porcentaje1").value);
+
+    let numero =
+        Number(document.getElementById("numero1").value);
+
+
+    if (isNaN(porcentaje) || isNaN(numero)) {
+
+        mostrarResultado(
+            "resultado1",
+            "Completá los dos campos."
+        );
+
+        return;
+
+    }
+
+
+    let resultado =
+        numero * porcentaje / 100;
+
+
+    mostrarResultado(
+        "resultado1",
+        porcentaje + "% de " +
+        numero.toLocaleString("es-AR") +
+        " = " +
+        resultado.toLocaleString("es-AR")
+    );
+
+}
+
+
+
+function calcularAumento() {
+
+    let precio =
+        Number(document.getElementById("precioAumento").value);
+
+    let porcentaje =
+        Number(document.getElementById("porcentajeAumento").value);
+
+
+    if (isNaN(precio) || isNaN(porcentaje)) {
+
+        mostrarResultado(
+            "resultadoAumento",
+            "Completá los dos campos."
+        );
+
+        return;
+
+    }
+
+
+    let aumento =
+        precio * porcentaje / 100;
+
+    let final =
+        precio + aumento;
+
+
+    mostrarResultado(
+        "resultadoAumento",
+        "Precio final: $" +
+        final.toLocaleString("es-AR")
+    );
+
+}
+
+
+
+function calcularDescuento() {
+
+    let precio =
+        Number(document.getElementById("precioDescuento").value);
+
+    let porcentaje =
+        Number(document.getElementById("porcentajeDescuento").value);
+
+
+    if (isNaN(precio) || isNaN(porcentaje)) {
+
+        mostrarResultado(
+            "resultadoDescuento",
+            "Completá los dos campos."
+        );
+
+        return;
+
+    }
+
+
+    let descuento =
+        precio * porcentaje / 100;
+
+    let final =
+        precio - descuento;
+
+
+    mostrarResultado(
+        "resultadoDescuento",
+        "Precio final: $" +
+        final.toLocaleString("es-AR")
+    );
+
+}
+
+
+
+function calcularQuePorcentaje() {
+
+    let parte =
+        Number(document.getElementById("parte").value);
+
+    let total =
+        Number(document.getElementById("total").value);
+
+
+    if (isNaN(parte) || isNaN(total) || total === 0) {
+
+        mostrarResultado(
+            "resultadoPorcentaje",
+            "Ingresá valores válidos."
+        );
+
+        return;
+
+    }
+
+
+    let resultado =
+        (parte / total) * 100;
+
+
+    mostrarResultado(
+        "resultadoPorcentaje",
+        "Resultado: " +
+        resultado.toFixed(2) +
+        "%"
+    );
+
+}
+
+
+
+function limpiar(input1, input2, resultado) {
+
+    document.getElementById(input1).value = "";
+
+    document.getElementById(input2).value = "";
+
+    document.getElementById(resultado).style.display = "none";
+
+}
+
+
+</script>
+
+
+</body>
+</html>
