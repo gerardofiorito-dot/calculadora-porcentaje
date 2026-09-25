@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Calculadoras Argentinas | Porcentaje e IVA</title>
+    <title>Calculadoras Argentinas | Porcentaje, IVA, Descuentos y Aumentos</title>
 
-    <meta name="description" content="Calculadoras online y gratis para Argentina. Calculá porcentajes, aumentos, descuentos e IVA de forma rápida y sencilla.">
+    <meta name="description" content="Calculadoras online gratis para Argentina. Calculá porcentajes, IVA, descuentos y aumentos de precios de forma rápida y sencilla.">
 
     <style>
         * {
@@ -24,7 +24,7 @@
             background: #1f2937;
             color: white;
             text-align: center;
-            padding: 30px 15px;
+            padding: 35px 15px;
         }
 
         header h1 {
@@ -35,6 +35,7 @@
         header p {
             margin: 0;
             color: #d1d5db;
+            font-size: 17px;
         }
 
         main {
@@ -58,6 +59,7 @@
 
         .calculadora p {
             color: #555;
+            line-height: 1.5;
         }
 
         label {
@@ -107,6 +109,7 @@
             border-radius: 8px;
             font-weight: bold;
             color: #166534;
+            line-height: 1.8;
         }
 
         footer {
@@ -116,6 +119,7 @@
         }
 
         @media (max-width: 600px) {
+
             header h1 {
                 font-size: 26px;
             }
@@ -130,42 +134,75 @@
 <body>
 
 <header>
+
     <h1>Calculadoras Argentinas</h1>
-    <p>Calculadoras online gratuitas, rápidas y fáciles de usar.</p>
+
+    <p>
+        Calculadoras online gratuitas, rápidas y fáciles de usar.
+    </p>
+
 </header>
+
 
 <main>
 
+
+    <!-- ================================= -->
     <!-- CALCULADORA DE PORCENTAJE -->
+    <!-- ================================= -->
 
     <div class="calculadora">
 
         <h2>Calculadora de Porcentaje</h2>
 
-        <p>Calculá porcentajes, aumentos, descuentos y proporciones.</p>
+        <p>
+            Calculá cuánto representa un porcentaje de un número.
+        </p>
 
         <label>¿Cuánto es X% de un número?</label>
 
-        <input type="number" id="numero1" placeholder="Ej: 50000">
+        <input
+            type="number"
+            id="numeroPorcentaje"
+            placeholder="Ej: 50000"
+        >
 
-        <input type="number" id="porcentaje1" placeholder="Ej: 21">
+        <label>Porcentaje</label>
+
+        <input
+            type="number"
+            id="valorPorcentaje"
+            placeholder="Ej: 21"
+        >
 
         <button onclick="calcularPorcentaje()">
-            Calcular
+            Calcular porcentaje
         </button>
 
-        <button class="limpiar" onclick="limpiar('numero1','porcentaje1','resultado1')">
+        <button
+            class="limpiar"
+            onclick="limpiarCampos(
+                'numeroPorcentaje',
+                'valorPorcentaje',
+                'resultadoPorcentaje'
+            )"
+        >
             Limpiar
         </button>
 
-        <div class="resultado" id="resultado1">
+        <div
+            class="resultado"
+            id="resultadoPorcentaje"
+        >
             Resultado:
         </div>
 
     </div>
 
 
+    <!-- ================================= -->
     <!-- CALCULADORA DE IVA -->
+    <!-- ================================= -->
 
     <div class="calculadora">
 
@@ -186,14 +223,25 @@
         <label>Porcentaje de IVA</label>
 
         <select id="tipoIVA">
-            <option value="21">21%</option>
-            <option value="10.5">10,5%</option>
-            <option value="27">27%</option>
+
+            <option value="21">
+                21%
+            </option>
+
+            <option value="10.5">
+                10,5%
+            </option>
+
+            <option value="27">
+                27%
+            </option>
+
         </select>
 
         <label>Operación</label>
 
         <select id="operacionIVA">
+
             <option value="agregar">
                 Agregar IVA al precio
             </option>
@@ -201,44 +249,169 @@
             <option value="quitar">
                 Quitar IVA de un precio final
             </option>
+
         </select>
 
         <button onclick="calcularIVA()">
             Calcular IVA
         </button>
 
-        <button class="limpiar" onclick="limpiarIVA()">
+        <button
+            class="limpiar"
+            onclick="limpiarIVA()"
+        >
             Limpiar
         </button>
 
-        <div class="resultado" id="resultadoIVA">
+        <div
+            class="resultado"
+            id="resultadoIVA"
+        >
             Resultado:
         </div>
 
     </div>
 
+
+    <!-- ================================= -->
+    <!-- CALCULADORA DE DESCUENTO -->
+    <!-- ================================= -->
+
+    <div class="calculadora">
+
+        <h2>Calculadora de Descuento</h2>
+
+        <p>
+            Calculá cuánto ahorrás y cuál es el precio final después
+            de aplicar un descuento.
+        </p>
+
+        <label>Precio original</label>
+
+        <input
+            type="number"
+            id="precioDescuento"
+            placeholder="Ej: 80000"
+        >
+
+        <label>Descuento</label>
+
+        <input
+            type="number"
+            id="porcentajeDescuento"
+            placeholder="Ej: 25"
+        >
+
+        <button onclick="calcularDescuento()">
+            Calcular descuento
+        </button>
+
+        <button
+            class="limpiar"
+            onclick="limpiarCampos(
+                'precioDescuento',
+                'porcentajeDescuento',
+                'resultadoDescuento'
+            )"
+        >
+            Limpiar
+        </button>
+
+        <div
+            class="resultado"
+            id="resultadoDescuento"
+        >
+            Resultado:
+        </div>
+
+    </div>
+
+
+    <!-- ================================= -->
+    <!-- CALCULADORA DE AUMENTO -->
+    <!-- ================================= -->
+
+    <div class="calculadora">
+
+        <h2>Calculadora de Aumento</h2>
+
+        <p>
+            Calculá cuánto aumenta un precio y cuál será su nuevo valor.
+        </p>
+
+        <label>Precio original</label>
+
+        <input
+            type="number"
+            id="precioAumento"
+            placeholder="Ej: 80000"
+        >
+
+        <label>Porcentaje de aumento</label>
+
+        <input
+            type="number"
+            id="porcentajeAumento"
+            placeholder="Ej: 15"
+        >
+
+        <button onclick="calcularAumento()">
+            Calcular aumento
+        </button>
+
+        <button
+            class="limpiar"
+            onclick="limpiarCampos(
+                'precioAumento',
+                'porcentajeAumento',
+                'resultadoAumento'
+            )"
+        >
+            Limpiar
+        </button>
+
+        <div
+            class="resultado"
+            id="resultadoAumento"
+        >
+            Resultado:
+        </div>
+
+    </div>
+
+
 </main>
 
+
 <footer>
+
     © 2026 Calculadoras Argentinas
+
 </footer>
 
 
 <script>
 
+
+/* ================================= */
+/* PORCENTAJE */
+/* ================================= */
+
 function calcularPorcentaje() {
 
     let numero = parseFloat(
-        document.getElementById("numero1").value
+        document.getElementById("numeroPorcentaje").value
     );
 
     let porcentaje = parseFloat(
-        document.getElementById("porcentaje1").value
+        document.getElementById("valorPorcentaje").value
     );
 
     if (isNaN(numero) || isNaN(porcentaje)) {
 
-        document.getElementById("resultado1").innerHTML =
+        document.getElementById(
+            "resultadoPorcentaje"
+        ).innerHTML =
             "Ingresá ambos valores.";
 
         return;
@@ -246,10 +419,18 @@ function calcularPorcentaje() {
 
     let resultado = numero * porcentaje / 100;
 
-    document.getElementById("resultado1").innerHTML =
-        "Resultado: " + resultado.toLocaleString("es-AR");
+    document.getElementById(
+        "resultadoPorcentaje"
+    ).innerHTML =
+
+        "Resultado: " +
+        resultado.toLocaleString("es-AR");
 }
 
+
+/* ================================= */
+/* IVA */
+/* ================================= */
 
 function calcularIVA() {
 
@@ -261,42 +442,169 @@ function calcularIVA() {
         document.getElementById("tipoIVA").value
     );
 
-    let operacion = document.getElementById("operacionIVA").value;
+    let operacion =
+        document.getElementById("operacionIVA").value;
 
     if (isNaN(precio)) {
 
-        document.getElementById("resultadoIVA").innerHTML =
+        document.getElementById(
+            "resultadoIVA"
+        ).innerHTML =
             "Ingresá un precio.";
 
         return;
     }
 
+
     if (operacion === "agregar") {
 
-        let montoIVA = precio * iva / 100;
-        let total = precio + montoIVA;
+        let montoIVA =
+            precio * iva / 100;
 
-        document.getElementById("resultadoIVA").innerHTML =
-            "Precio sin IVA: $" + precio.toLocaleString("es-AR") +
-            "<br>IVA (" + iva + "%): $" + montoIVA.toLocaleString("es-AR") +
-            "<br>Precio final: $" + total.toLocaleString("es-AR");
+        let total =
+            precio + montoIVA;
 
-    } else {
+        document.getElementById(
+            "resultadoIVA"
+        ).innerHTML =
 
-        let precioSinIVA = precio / (1 + iva / 100);
-        let montoIVA = precio - precioSinIVA;
+            "Precio sin IVA: $" +
+            precio.toLocaleString("es-AR") +
 
-        document.getElementById("resultadoIVA").innerHTML =
-            "Precio final: $" + precio.toLocaleString("es-AR") +
-            "<br>IVA (" + iva + "%): $" + montoIVA.toLocaleString("es-AR") +
-            "<br>Precio sin IVA: $" + precioSinIVA.toLocaleString("es-AR");
+            "<br>IVA (" +
+            iva +
+            "%): $" +
+            montoIVA.toLocaleString("es-AR") +
+
+            "<br>Precio final: $" +
+            total.toLocaleString("es-AR");
+
     }
+
+
+    else {
+
+        let precioSinIVA =
+            precio / (1 + iva / 100);
+
+        let montoIVA =
+            precio - precioSinIVA;
+
+        document.getElementById(
+            "resultadoIVA"
+        ).innerHTML =
+
+            "Precio final: $" +
+            precio.toLocaleString("es-AR") +
+
+            "<br>IVA (" +
+            iva +
+            "%): $" +
+            montoIVA.toLocaleString("es-AR") +
+
+            "<br>Precio sin IVA: $" +
+            precioSinIVA.toLocaleString("es-AR");
+    }
+
 }
 
 
-function limpiar(campo1, campo2, resultado) {
+/* ================================= */
+/* DESCUENTO */
+/* ================================= */
+
+function calcularDescuento() {
+
+    let precio = parseFloat(
+        document.getElementById("precioDescuento").value
+    );
+
+    let descuento = parseFloat(
+        document.getElementById("porcentajeDescuento").value
+    );
+
+    if (isNaN(precio) || isNaN(descuento)) {
+
+        document.getElementById(
+            "resultadoDescuento"
+        ).innerHTML =
+            "Ingresá el precio y el descuento.";
+
+        return;
+    }
+
+    let ahorro =
+        precio * descuento / 100;
+
+    let precioFinal =
+        precio - ahorro;
+
+    document.getElementById(
+        "resultadoDescuento"
+    ).innerHTML =
+
+        "Descuento: $" +
+        ahorro.toLocaleString("es-AR") +
+
+        "<br>Precio final: $" +
+        precioFinal.toLocaleString("es-AR");
+}
+
+
+/* ================================= */
+/* AUMENTO */
+/* ================================= */
+
+function calcularAumento() {
+
+    let precio = parseFloat(
+        document.getElementById("precioAumento").value
+    );
+
+    let aumento = parseFloat(
+        document.getElementById("porcentajeAumento").value
+    );
+
+    if (isNaN(precio) || isNaN(aumento)) {
+
+        document.getElementById(
+            "resultadoAumento"
+        ).innerHTML =
+            "Ingresá el precio y el porcentaje.";
+
+        return;
+    }
+
+    let montoAumento =
+        precio * aumento / 100;
+
+    let precioFinal =
+        precio + montoAumento;
+
+    document.getElementById(
+        "resultadoAumento"
+    ).innerHTML =
+
+        "Aumento: $" +
+        montoAumento.toLocaleString("es-AR") +
+
+        "<br>Precio final: $" +
+        precioFinal.toLocaleString("es-AR");
+}
+
+
+/* ================================= */
+/* LIMPIAR */
+/* ================================= */
+
+function limpiarCampos(
+    campo1,
+    campo2,
+    resultado
+) {
 
     document.getElementById(campo1).value = "";
+
     document.getElementById(campo2).value = "";
 
     document.getElementById(resultado).innerHTML =
@@ -311,6 +619,7 @@ function limpiarIVA() {
     document.getElementById("resultadoIVA").innerHTML =
         "Resultado:";
 }
+
 
 </script>
 
