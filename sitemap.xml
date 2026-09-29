@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/</loc></url>
-<url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/porcentaje.html</loc></url>
-<url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/iva.html</loc></url>
-<url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/descuento.html</loc></url>
-<url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/aumento.html</loc></url>
-<url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/regla-de-tres.html</loc></url>
-<url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/cuotas.html</loc></url>
-<url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/sueldo-neto.html</loc></url>
-<url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/combustible.html</loc></url>
-<url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/edad.html</loc></url>
-<url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/porcentaje-aumento.html</loc></url>
-<url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/interes.html</loc></url>
-<url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/inflacion.html</loc></url>
-<url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/precio-final.html</loc></url>
-<url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/ganancia.html</loc></url>
-<url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/propina.html</loc></url>
-<url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/categorias/dinero.html</loc></url>
-<url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/categorias/finanzas.html</loc></url>
-<url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/categorias/vida-cotidiana.html</loc></url>
-<url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/categorias/matematica.html</loc></url>
-<url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/sobre-nosotros.html</loc></url>
-<url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/contacto.html</loc></url>
-<url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/privacidad.html</loc></url>
-<url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/terminos.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/aumento.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/combustible.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/cuotas.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/descuento.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/edad.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/ganancia.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/inflacion.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/interes.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/iva.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/porcentaje-aumento.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/porcentaje.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/precio-final.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/propina.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/regla-de-tres.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/calculadoras/sueldo-neto.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/categorias/dinero.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/categorias/finanzas.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/categorias/matematica.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/categorias/vida-cotidiana.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/contacto.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/guias/calcular-cuotas.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/guias/calcular-inflacion.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/guias/calcular-iva-argentina.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/guias/calcular-porcentaje.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/guias/calcular-sueldo-neto-argentina.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/guias/index.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/privacidad.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/sobre-nosotros.html</loc></url>
+  <url><loc>https://gerardofiorito-dot.github.io/calculadora-porcentaje/terminos.html</loc></url>
 </urlset>
